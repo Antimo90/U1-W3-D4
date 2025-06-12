@@ -64,17 +64,17 @@ const extractRandomNumber = () => {
   }
 };
 
-// Attendiamo che il DOM sia completamente caricato prima di eseguire lo script.
-document.addEventListener("DOMContentLoaded", () => {
-  // 1. Chiama la funzione per creare il tabellone quando la pagina è pronta.
-  createCells();
-  // 2. Ottieni un riferimento al bottone di estrazione.
-  const extractButton = document.getElementById("extractButton");
-  // 3. Aggiungi un listener di eventi 'click' al bottone.
-  if (extractButton) {
-    extractButton.addEventListener("click", extractRandomNumber);
-  }
-});
+// // Attendiamo che il DOM sia completamente caricato prima di eseguire lo script.
+// document.addEventListener("DOMContentLoaded", () => {
+//   // 1. Chiama la funzione per creare il tabellone quando la pagina è pronta.
+//   createCells();
+//   // 2. Ottieni un riferimento al bottone di estrazione.
+//   const extractButton = document.getElementById("extractButton");
+//   // 3. Aggiungi un listener di eventi 'click' al bottone.
+//   if (extractButton) {
+//     extractButton.addEventListener("click", extractRandomNumber);
+//   }
+// });
 
 // Crea la tabellina del giocatore
 // const createPlayerBoard = () => {
