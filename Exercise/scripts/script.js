@@ -77,23 +77,27 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Crea la tabellina del giocatore
-const createPlayerBoard = () => {
-  const playerBoard = document.getElementById("playerBoard");
-  // Genera 24 numeri casuali unici per la tabellina del giocatore
-  const playerNumbers = [];
-  const randomNumber = Math.ceil(Math.random() * numberOfCells);
-  if (!playerNumbers.includes(randomNumber)) {
-    playerNumbers.push(randomNumber);
-  }
-  // Ordina i numeri per una migliore leggibilità sulla tabellina
-  playerNumbers.sort();
-  // Crea le celle della tabellina del giocatore
-  playerNumbers.forEach(number => {
-        const cell = document.createElement("div");
-        //  Usa la stessa classe di stile delle celle del tabellone
-        cell.classList.add("tombolaCell");
-        cell.textContent = number;
-        // per la marcatura!
-        cell.setAttribute("dataNumber", number);
-        playerBoard.appendChild(cell);
-};
+// const createPlayerBoard = () => {
+//   const playerBoard = document.getElementById("playerBoard");
+//   // Genera 24 numeri casuali unici per la tabellina del giocatore
+//   const playerNumbers = [];
+//   const randomNumber = Math.ceil(Math.random() * numberOfCells);
+//   if (!playerNumbers.includes(randomNumber)) {
+//     playerNumbers.push(randomNumber);
+//   }
+//   // Ordina i numeri per una migliore leggibilità sulla tabellina
+//   playerNumbers.sort();
+//   // Crea le celle della tabellina del giocatore
+//   playerNumbers.forEach(number => {
+//         const cell = document.createElement("div");
+//         //  Usa la stessa classe di stile delle celle del tabellone
+//         cell.classList.add("tombolaCell");
+//         cell.textContent = number;
+//         // per la marcatura!
+//         cell.setAttribute("dataNumber", number);
+//         playerBoard.appendChild(cell);
+//         const playerBoardCellToMark = document.querySelector(`#player-board .tombola-cell[data-number="${randomNumber}"]`);
+//     if (playerBoardCellToMark && !playerBoardCellToMark.classList.contains("drawn")) {
+//         playerBoardCellToMark.classList.add("drawn");
+//     }
+// };
