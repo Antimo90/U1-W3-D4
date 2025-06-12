@@ -1,0 +1,96 @@
+/* Stili per il body */
+body {
+   font-family: Arial, sans-serif;
+   text-align: center;
+   margin-top: 20px;
+   background-color: #6d77f8;
+}
+h1, h2 {
+    color: #5e0404;
+}
+
+/* Stili per il contenitore principale del tabellone */
+#tombolaBoard {
+     display: grid;
+            /* Regola il numero di colonne in base al layout desiderato */
+     grid-template-columns: repeat(10, 50px); /* 10 colonne, ciascuna larga 50px */
+     gap: 5px;
+     width: fit-content;
+     margin: 20px auto;
+     padding: 10px;
+     border: 2px solid #525252;
+     border-radius: 8px;
+     background-color: #a7a5a5;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* Stili per ogni singola cella numerata (sia del tabellone che della tabellina del giocatore) */
+.tombolaCell {
+       width: 50px;
+       height: 50px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       font-family: Arial, sans-serif;
+       font-size: 1.2em;
+       font-weight: bold;
+       border: 1px solid #ccc;
+       border-radius: 4px;
+       background-color: #fff;
+       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+       transition: background-color 0.2s ease, transform 0.2s ease;
+       cursor: pointer;
+}
+
+.tombolaCell:hover {
+       background-color: #e0e0e0;
+       transform: scale(1.05);
+}
+
+  /* Opzionale: Stile per quando una cella è "estratta" o selezionata */
+.tombolaCell.drawn {
+      background-color: #ffc107; /* Un colore giallo */
+      color: #fff;
+      border-color: #ffc107;
+      transform: scale(1.1);
+}
+/* Stili per il contenitore dei controlli (bottone ed estratto) */
+#controls {
+    margin-bottom: 20px;
+}
+/* Stili per il bottone di estrazione */
+#extractButton {
+     padding: 10px 20px;
+     font-size: 1.1em;   
+     cursor: pointer;
+     background-color: #62b676; /* Verde per il bottone di estrazione */
+     color: white;
+     border: none;
+     border-radius: 5px;
+     transition: background-color 0.3s ease;
+}
+
+#extractButton:hover {
+     background-color: #609b6c;
+}
+
+/* Stili per il display del numero estratto */
+#extractedNumberDisplay {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #007bff; /* Blu */
+    margin-top: 10px;
+}
+
+/* Stili per il contenitore della tabellina del giocatore */
+#playerBoard {
+    display: grid;
+    grid-template-columns: repeat(6, 50px); /* Adattato per 6 colonne (4 righe per 24 celle) */
+    gap: 5px;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 10px;
+    border: 2px solid #666; /* Bordo leggermente diverso */
+    border-radius: 8px;
+    background-color: #e0e0e0; /* Sfondo leggermente diverso */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
